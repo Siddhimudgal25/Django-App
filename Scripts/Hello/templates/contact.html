@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}contact{% endblock title %}
+
+{% block body %}
+<div.class="container">
+    <img src="https://images.unsplash.com/photo-1528747045269-390fe33c19f2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="...">
+<h1 class="text-center">Contact us</h1>
+</div>
+<div class="container d-flex justify-content-center align-items-center">
+<form method="POST" action="/contact">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="name" class="form-control" id="name" name="Name" placeholder="Enter your Name">
+    </div>
+    <div class="form-group">
+      <label for="">Email Address</label>
+      <input type="email" class="form-control" id="email address" name="Email" placeholder="Enter your Email">
+    </div>
+    <div class="form-group">
+        <label for="contact">Contact Number</label>
+        <input type="contact" class="form-control" id="contact number" name="Contact" placeholder="Enter your Contact Number">
+      </div>
+        <div class="form-group">
+      <label for="desc">Tell me what you are contacting for..</label>
+      <textarea class="form-control" id="desc" rows="3" name="Desc"></textarea>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+</div>
+{% endblock body %}
